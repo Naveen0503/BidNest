@@ -1,0 +1,6 @@
+@BidNest_Api_HostAddress = http://localhost:5056
+
+GET {{BidNest_Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
