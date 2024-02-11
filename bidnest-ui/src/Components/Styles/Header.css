@@ -1,0 +1,80 @@
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2E2E2E; 
+  }
+  
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .bidnest-text {
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 30px;
+    margin-right: 4px;
+    color:#5ac816;
+  }
+  
+  .gavel-icon {
+    font-size: 30px;
+    color: #5ac816; 
+  }
+
+  .user-icon {
+    margin-left:3px;
+  }
+  
+  .right-section nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .right-section nav li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .right-section nav a {
+    text-decoration: none;
+    color: #5ac816;
+    font-weight: bold;
+  }
+  
+  .right-section nav a:hover {
+    color: #5ac816; 
+  }
+  
+  .login-button,
+  .signup-button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .login-button {
+    color: #5ac816; 
+    background-color: transparent;
+    border: 1px solid #5ac816; 
+  }
+  
+  .signup-button {
+    color: #2E2E2E; 
+    background-color: #5ac816; 
+  }
+  

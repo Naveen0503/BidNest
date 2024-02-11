@@ -1,0 +1,96 @@
+
+.login-popup {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0 0 0 / 83%);
+  }
+  
+  .login-popup-content {
+    background-color: #171717;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #d3efbe;
+    width: 40%;
+    border-radius: 15px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #000;
+  }
+  .toggle-section{
+    display: flex;
+    justify-content: center;
+  }
+  .toggle-switch {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 18px;
+    width: 25%;
+    border-radius: 10px;
+    border: solid #5ac816;
+  }
+  
+  .toggle-switch span {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 7px;
+    user-select: none;
+    width:80%;
+  }
+  
+  .toggle-switch span.active {
+    background-color: #5ac816;
+    color: #fff;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .input-container {
+    margin-bottom: 15px;
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid #d3efbe;
+    border-radius: 8px;
+    width:100%;
+    background-color: #171717;
+    color:#d3efbe;
+  }
+  
+  button {
+    background-color: #5ac816;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #227c62;
+  }
+  
+  .button-section{
+    display: flex;
+    justify-content: space-evenly;
+  }

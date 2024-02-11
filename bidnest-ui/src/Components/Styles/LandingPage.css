@@ -1,0 +1,66 @@
+
+
+.landing-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+
+  }
+  
+  .landing-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Set a maximum width for the landing page */
+    width: 100%;
+    padding: 20px; /* Adjust padding based on your needs */
+    background-color: #171717;
+  }
+  
+  .right-section {
+    flex: 1;
+  }
+  
+  .right-section h2 {
+    font-family: 'Oswald', sans-serif;
+    color: #227c62;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .right-section h2 .bold {
+    font-weight: bold;
+  }
+  
+  .right-section p {
+    color: #d3efbe;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #5ac816;
+    color: #e8fbd3;
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .left-section {
+    flex: 1;
+  }
+  
+  .left-section img {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+  }
+
+  h2{
+    font-weight: bold;
+  }
+  

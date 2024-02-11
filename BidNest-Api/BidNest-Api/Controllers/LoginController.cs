@@ -40,7 +40,7 @@ namespace BidNest_Api.Controllers
                     };
                     return Ok(User);
                 }
-                return NotFound("User Not found");
+                return Ok("User Not found");
             }
             catch (Exception ex)
             {
