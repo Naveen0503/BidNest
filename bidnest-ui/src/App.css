@@ -4,7 +4,16 @@
   font-family: 'Oswald', sans-serif;
   color: #d3efbe;
 }
-
+button {
+  background-color: #5ac816;
+  color: #e8fbd3;
+  padding: 10px 20px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

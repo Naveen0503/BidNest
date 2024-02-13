@@ -77,14 +77,16 @@
     color:#d3efbe;
   }
   
-  button {
-    background-color: #5ac816;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-  }
+ .button-section  button {
+  background-color: #5ac816;
+  color: #e8fbd3;
+  padding: 10px 20px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
   
   button:hover {
     background-color: #227c62;

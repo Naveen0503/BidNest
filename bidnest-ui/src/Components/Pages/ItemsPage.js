@@ -3,7 +3,7 @@ import '../Styles/ItemsPage.css';
 import axios from 'axios';
 import variable from '../../Variable/variables';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from '../Common/Header';
+
 
 const ItemsPage = () => {
   const [items, setItems] = useState([]);
@@ -18,7 +18,6 @@ const ItemsPage = () => {
 
   return (
     <>
-    <Header/>
     <div className="items-container">
       <div className="item-card">
         <div className="carousel-container">

@@ -26,8 +26,8 @@ const LoginPopup = (props) => {
         if(res.data !== "User Not found"){
          sessionStorage.setItem('token', res.data.token);
          sessionStorage.setItem('username',res.data.username);
-         window.location.reload();
          navigate('/Bid');
+         window.location.reload();
         }
         else {
 

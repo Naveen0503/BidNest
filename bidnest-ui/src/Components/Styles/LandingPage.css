@@ -40,7 +40,7 @@
     margin-bottom: 20px;
   }
   
-  button {
+  .get-started,button {
     background-color: #5ac816;
     color: #e8fbd3;
     padding: 10px 20px;

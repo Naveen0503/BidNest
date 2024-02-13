@@ -23,7 +23,7 @@ const LandingPage = () => {
             <div className="info">
               <p>Your premier online auction platform, BidNest, provides a secure and exciting marketplace for buying and selling a wide variety of items. Join our community and start bidding today!</p>
             </div>
-            <button onClick={openLoginPopup}>Get Started</button>
+            <button class="get-started"onClick={openLoginPopup}>Get Started</button>
           </section>
           <section className="left-section">
             <img src={require('../../Assets/Auction.png')} alt="Auction" />
