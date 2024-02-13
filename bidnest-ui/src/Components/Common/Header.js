@@ -30,7 +30,7 @@ const Header = () => {
     <header>
       <div className="left-section">
         <div className="logo-container">
-          <span className="bidnest-text">Bidnest</span>
+          <span className="bidnest-text">BidNest</span>
           <FontAwesomeIcon icon={faGavel} className="gavel-icon" />
         </div>
       </div>

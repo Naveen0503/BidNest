@@ -2,6 +2,7 @@
 using BidNest_Library.Models;
 using MailKit.Net.Smtp;
 using MailKit.Security;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 using MimeKit;
 using System;
@@ -19,6 +20,16 @@ namespace BidNest_Library.Helpers
         public Services(IOptions<EmailConfiguration> emailConfig)
         {
             _emailConfig = emailConfig.Value;
+        }
+
+        public async Task<byte[]> SaveImageDataAsync(IFormFile file)
+        {
+            using (var memoryStream = new MemoryStream())
+            {
+                await file.CopyToAsync(memoryStream);
+                byte[] data = memoryStream.ToArray();
+                return data;
+            }
         }
 
         public async Task<string> SendEmailAsync(Email email)

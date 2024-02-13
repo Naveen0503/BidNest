@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BidNest_Library.Models;
+using BidNest_Library.Helpers;
+using BidNest_Library.Interfaces;
 
 namespace BidNest_Api.Controllers
 {
@@ -14,10 +16,12 @@ namespace BidNest_Api.Controllers
     public class ItemImagesController : ControllerBase
     {
         private readonly BidNestContext _context;
+        private readonly IServices _services;
 
-        public ItemImagesController(BidNestContext context)
+        public ItemImagesController(BidNestContext context,IServices services)
         {
             _context = context;
+            _services = services;
         }
 
         // GET: api/ItemImages
@@ -72,16 +76,35 @@ namespace BidNest_Api.Controllers
             return NoContent();
         }
 
-        // POST: api/ItemImages
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<ItemImage>> PostItemImage(ItemImage itemImage)
+        [HttpPost("upload-images")]
+        public async Task<ActionResult<List<ItemImage>>> PostItemImages(List<IFormFile> images,int id)
         {
-            _context.ItemImages.Add(itemImage);
-            await _context.SaveChangesAsync();
+            List<ItemImage> uploadedImages = new List<ItemImage>();
 
-            return CreatedAtAction("GetItemImage", new { id = itemImage.ImageId }, itemImage);
+            try
+            {
+                foreach (var imageFile in images)
+                {
+                    var imageData = await _services.SaveImageDataAsync(imageFile);
+
+                    var itemImage = new ItemImage
+                    {
+                        ItemId = id,
+                        ImageData = imageData
+                    };
+
+                    _context.ItemImages.Add(itemImage);
+                    uploadedImages.Add(itemImage);
+                }
+                await _context.SaveChangesAsync();
+               return Ok(uploadedImages);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = "Error uploading images", Error = ex.Message ,innerexception = ex.InnerException});
+            }
         }
+
 
         // DELETE: api/ItemImages/5
         [HttpDelete("{id}")]
