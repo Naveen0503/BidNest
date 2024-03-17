@@ -45,8 +45,6 @@ namespace BidNest_Api.Controllers
             return itemImage;
         }
 
-        // PUT: api/ItemImages/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutItemImage(int id, ItemImage itemImage)
         {

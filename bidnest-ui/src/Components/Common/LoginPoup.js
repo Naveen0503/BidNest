@@ -2,14 +2,12 @@ import React, { useState } from 'react';
 import '../Styles/LoginPopup.css'; 
 import axios from 'axios'
 import variable from '../../Variable/variables';
-import { useNavigate } from 'react-router-dom';
 
 const LoginPopup = (props) => {
   const [isLoginMode, setLoginMode] = useState(props.Mode);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [email,setEmail] = useState('');
-  const navigate = useNavigate();
 
   const handleToggleSwitch = () => {
     setLoginMode(!isLoginMode);
@@ -26,7 +24,6 @@ const LoginPopup = (props) => {
         if(res.data !== "User Not found"){
          sessionStorage.setItem('token', res.data.token);
          sessionStorage.setItem('username',res.data.username);
-         navigate('/Bid');
          window.location.reload();
         }
         else {

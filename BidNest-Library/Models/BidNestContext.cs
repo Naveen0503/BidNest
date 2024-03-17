@@ -26,8 +26,4 @@ public partial class BidNestContext : DbContext
     public virtual DbSet<Transaction> Transactions { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-
-        => optionsBuilder.UseSqlServer("Server=.;Database=BidNest;Trusted_Connection=True;TrustServerCertificate=True");
 }

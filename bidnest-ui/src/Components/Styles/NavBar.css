@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #5ac816; /* Your chosen background color */
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-item {
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff; /* Text color */
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .nav-item:hover a {
+    color: #227c62;
+  }
+  
